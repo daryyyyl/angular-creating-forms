@@ -5,6 +5,7 @@ import { BlogListComponent } from './pages/blog-list.component';
 import { BlogRoutingModule } from './blog-routing.module';
 import { CommandBarComponent } from 'src/app/shared/components/command-bar/command-bar.component';
 import { Blog } from './models/blog';
+import { BlogFormComponent } from './pages/blog-form/blog-form.component';
 
 
 
@@ -12,7 +13,8 @@ import { Blog } from './models/blog';
   declarations: [
     BlogListComponent,
     BlogItemComponent,
-    CommandBarComponent
+    CommandBarComponent,
+    BlogFormComponent
   ],
   imports: [
     CommonModule,
