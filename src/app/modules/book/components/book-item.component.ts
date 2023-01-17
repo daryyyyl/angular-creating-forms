@@ -9,11 +9,11 @@ import { Book } from '../models/book';
 export class BookItemComponent {
   @Input() book: Book | undefined
 
-  edit = (id:number | undefined) => {
-    console.log('Edit: ', id)
+  edit = (name:string | undefined) => {
+    console.log('Edit: ', name)
   }
 
-  delete = (id:number | undefined) => {
-    console.log('Delete: ', id)
+  delete = (name:string | undefined) => {
+    console.log('Delete: ', name)
   }
 }

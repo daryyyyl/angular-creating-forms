@@ -13,7 +13,6 @@ import { BlogFormComponent } from './pages/blog-form/blog-form.component';
   declarations: [
     BlogListComponent,
     BlogItemComponent,
-    CommandBarComponent,
     BlogFormComponent
   ],
   imports: [

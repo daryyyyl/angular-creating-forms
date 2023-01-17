@@ -8,17 +8,16 @@ const routes: Routes = [
     loadChildren: () => import('./modules/book/book.module').then(m => m.BookModule)
   },
   {
-    path: '',
-    redirectTo: 'blog',
-    pathMatch: 'full'
-  },
-  {
     path: 'blog',
     loadChildren: () => import('./modules/blog/blog.module').then(m => m.BlogModule)
   },
   {
     path: 'profile',
     component: UserComponent
+  },
+  {
+    path: 'form',
+    loadChildren: () => import('./modules/book/pages/book-form.module').then(m => m.BookFormModule)
   }
 ];
 

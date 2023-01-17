@@ -1,6 +1,7 @@
 <div *ngFor="let item of book">
-    <div class="card text-bg-light my-3" style="max-width: 18rem;">
-        <app-book-item [book]="item"></app-book-item>
-        <div class="card-footer"><app-command-bar></app-command-bar></div>
+    <div class="card my-3" style="max-width: 18rem;">
+        <div class="card-body">
+            <app-book-item [book]="item"></app-book-item>
+        </div>
     </div>
 </div>

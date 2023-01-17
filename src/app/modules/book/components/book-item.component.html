@@ -1,6 +1,15 @@
-<div class="card-header">Book Name: {{book?.name}}</div>
+<!-- <div class="card-header">Book Name: {{book?.name}}</div>
 <div class="card-body">
     <p class="card-text">Book ID: {{book?.id}}</p>
     <p class="card-text">Book Authors: {{book?.authors}}</p>
     <p class="card-text">Book ISBN: {{book?.isbn}}</p>
+</div> -->
+
+<h2 class="card-title">{{book?.name}}</h2>
+<p class="card-text">Authors:</p>
+<p class="card-text">{{book?.authors}}</p>
+<p class="card-text">{{book?.isbn}}</p>
+<div class="btn-group">
+    <button class="btn btn-primary" (click)="edit(book?.name)">Edit</button>
+    <button class="btn btn-danger" (click)="delete(book?.name)">Delete</button>
 </div>

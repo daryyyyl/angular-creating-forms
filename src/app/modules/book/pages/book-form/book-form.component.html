@@ -1,1 +1,24 @@
-<p>book-form works!</p>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label>
+    <br>
+    <label>
+        ISBN:
+        <input type="text" formControlName="isbn">
+    </label>
+    <br>
+    <!-- <div formArrayName="authors">
+        <div *ngFor="let author of bookForm.get('authors').controls; let i = index">
+            <label>
+                Author {{i + 1}}:
+                <input type="text" [formControlName]="i">
+            </label>
+            <br>
+        </div>
+    </div> -->
+    <!-- <button type="button" (click)="addAuthor()">Add Author</button> -->
+    <br>
+    <button type="submit" [disabled]="!bookForm.valid">Submit</button>
+</form>
