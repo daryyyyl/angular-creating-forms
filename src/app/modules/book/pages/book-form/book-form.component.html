@@ -4,18 +4,18 @@
         <label for="email">Name</label>
     </div>
     <div class="form-floating my-3">
-        <input type="text" formControlName="isbn" class="form-control" id="isbn" placeholder="1234567890">
+        <input type="number" formControlName="isbn" class="form-control" id="isbn" placeholder="1234567890">
         <label for="email">ISBN</label>
     </div>
     <ng-container formArrayName="authors">
         <label for="authors">Authors:</label>
         <div class="input-group mb-3 mt-1" *ngFor="let _ of authorsArray.controls; index as i">
             <input [formControlName]="i" class="form-control">
-            <!-- <button type="button" (click)="deleteAuthor(i)" class="btn btn-danger">Delete</button> -->
+            <button type="button" (click)="deleteAuthor(i)" class="btn btn-danger px-4">Delete</button>
         </div>
-        <!-- <button type="button" (click)="addAuthor()" class="btn btn-info">Add Power</button> -->
     </ng-container>
-    <!-- <button type="button" (click)="addAuthor()">Add Author</button> -->
-    <button class="btn btn-outline-success" type="submit">Submit</button>
-    <!-- [disabled]="!bookForm.valid" -->
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" (click)="addAuthor()" class="btn btn-outline-primary">Add Author</button>
+        <button class="btn btn-outline-success" type="submit">Submit</button>
+    </div>
 </form>

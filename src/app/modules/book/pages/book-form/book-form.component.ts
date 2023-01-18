@@ -26,16 +26,23 @@ export class BookFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.bookForm.valueChanges.subscribe(data => {
-      console.clear()
-      console.log(data)
-    })
+    // this.bookForm.valueChanges.subscribe(data => {
+    //   console.clear()
+    //   console.log(data)
+    // })
+  }
+  
+  onSubmit = () => {
+    // const myBookForm:Book = this.bookForm.getRawValue() as Book
+    console.log('myBookForm', this.bookForm.getRawValue() as Book)
+    this.bookForm.reset()
   }
 
-  onSubmit = () => {
-    //console.log(this.antiHeroForm.value)
-    // const myAntiHero:AntiHero = this.antiHeroForm.value as AntiHero
-    const myBookForm:Book = this.bookForm.getRawValue() as Book
-    console.log('myBookForm', myBookForm)
+  addAuthor = () => {
+    this.authorsArray.push(new FormControl())
+  }
+
+  deleteAuthor = (i:number) => {
+    this.authorsArray.removeAt(i)
   }
 }

@@ -16,7 +16,7 @@ const routes: Routes = [
     component: UserComponent
   },
   {
-    path: 'form',
+    path: 'book/form',
     loadChildren: () => import('./modules/book/pages/book-form.module').then(m => m.BookFormModule)
   }
 ];

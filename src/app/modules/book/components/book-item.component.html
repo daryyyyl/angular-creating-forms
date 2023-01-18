@@ -10,6 +10,8 @@
 <p class="card-text">{{book?.authors}}</p>
 <p class="card-text">{{book?.isbn}}</p>
 <div class="btn-group">
-    <button class="btn btn-primary" (click)="edit(book?.name)">Edit</button>
+    <!-- <button class="btn btn-primary" (click)="edit(book?.name)">Edit</button>
+    <button class="btn btn-danger" (click)="delete(book?.name)">Delete</button> -->
+    <button class="btn btn-primary" routerlink="book/form">Edit</button>
     <button class="btn btn-danger" (click)="delete(book?.name)">Delete</button>
 </div>
