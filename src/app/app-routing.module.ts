@@ -15,14 +15,23 @@ const routes: Routes = [
     path: 'profile',
     component: UserComponent
   },
-  {
-    path: 'form',
-    redirectTo: 'book/form',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: 'form',
+  //   redirectTo: 'book/form',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'book/form',
     loadChildren: () => import('./modules/book/pages/book-form.module').then(m => m.BookFormModule)
+  },
+  // {
+  //   path: 'form',
+  //   redirectTo: 'blog/form',
+  //   pathMatch: 'full'
+  // },
+  {
+    path: 'blog/form',
+    loadChildren: () => import('./modules/blog/pages/blog-form.module').then(m => m.BlogFormModule)
   }
 ];
 

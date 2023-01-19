@@ -1,11 +1,11 @@
 <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
     <div class="form-floating my-3">
         <input type="text" formControlName="name" class="form-control" id="name" placeholder="Roger Twenty">
-        <label for="email">Name</label>
+        <label for="name">Name</label>
     </div>
     <div class="form-floating my-3">
         <input type="number" formControlName="isbn" class="form-control" id="isbn" placeholder="1234567890">
-        <label for="email">ISBN</label>
+        <label for="isbn">ISBN</label>
     </div>
     <ng-container formArrayName="authors">
         <label for="authors">Authors:</label>

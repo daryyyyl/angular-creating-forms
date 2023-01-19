@@ -1,7 +1,9 @@
-<div class="card-header">Blog Title: {{blog?.title}}</div>
-<div class="card-body">
-    <!-- <p class="card-text">Blog ID: {{blog?.id}}</p> -->
-    <p class="card-text">Blog Description: {{blog?.description}}</p>
-    <p class="card-text">Blog Author: {{blog?.author}}</p>
-    <p class="card-text">Blog Comments: {{blog?.comments}}</p>
+<h2 class="card-title">{{blog?.title}}</h2>
+<p class="card-text">{{blog?.description}}</p>
+<p class="card-text">{{blog?.author}}</p>
+<p class="card-text">Comments:</p>
+<p class="card-text">{{blog?.comments}}</p>
+<div class="btn-group">
+    <button routerLink="form" class="btn btn-primary">Edit</button>
+    <button routerLink="form" class="btn btn-danger">Delete</button>
 </div>
