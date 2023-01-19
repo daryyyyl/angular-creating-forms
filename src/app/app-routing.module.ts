@@ -16,6 +16,11 @@ const routes: Routes = [
     component: UserComponent
   },
   {
+    path: 'form',
+    redirectTo: 'book/form',
+    pathMatch: 'full'
+  },
+  {
     path: 'book/form',
     loadChildren: () => import('./modules/book/pages/book-form.module').then(m => m.BookFormModule)
   }

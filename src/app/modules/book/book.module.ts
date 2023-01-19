@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BookItemComponent } from './components/book-item.component';
 import { BookListComponent } from './pages/book-list.component';
 import { BookRoutingModule } from './book-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,6 +14,7 @@ import { BookRoutingModule } from './book-routing.module';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     BookRoutingModule
   ]
 })
