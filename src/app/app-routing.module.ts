@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component: UserComponent
+    loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule)
   },
   // {
   //   path: 'form',
